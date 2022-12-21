@@ -13,23 +13,26 @@
 <body>
   
   <div class="center">
+    <!-- Content Section -->
     <div>
       <h1>Thomas Cavalcante</h1>
       <p class="first">Download my contact card or email me below.</p>
     </div>
+     <!-- Contact Button -->
     <div class="contact-button">
-      <button id="link" class="button-29" role="button"><i class="fa fa-download"></i></button>
+       <!-- Share Button -->
+      <button id="link" class="button-29" role="button"><i class="fa fa-download"></i></button> 
+      <!-- Share Button -->
       <button class="button-29" role="button"><i class="fa fa-envelope"></i>
         <a href="mailto:tpc75@drexel.edu">Email</a>
       </button>
-
     </div>
   </div>
 
   <script type="text/javascript">
     // Without helper methods
     var johnDoe = vCard.create(vCard.Version.FOUR)
-    johnDoe.add(vCard.Entry.NAME, "CAVALCANTE;Thomas;;")
+    johnDoe.add(vCard.Entry.NAME, "Cavalcante;Thomas;;")
     johnDoe.add(vCard.Entry.FORMATTEDNAME, "Thomas Cavalcante")
     johnDoe.add(vCard.Entry.NICKNAME, "tc")
     johnDoe.add(vCard.Entry.TITLE, "Developer")

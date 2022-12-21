@@ -1,3 +1,6 @@
+// vcard.js
+
+// VCF File Stuff
 (function(context) {
   var version = {
     "TWO": "2.1",
