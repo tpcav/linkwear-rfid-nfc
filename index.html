@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linkwear.co</title>
+  <script type="text/javascript" src="vcard.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  
+  <div class="center">
+    <div>
+      <h1>Thomas Cavalcante</h1>
+      <p class="first">Download my contact card or email me below.</p>
+    </div>
+    <div class="contact-button">
+      <button id="link" class="button-29" role="button"><i class="fa fa-download"></i></button>
+      <button class="button-29" role="button"><i class="fa fa-envelope"></i>
+        <a href="mailto:tpc75@drexel.edu">Email</a>
+      </button>
+
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    // Without helper methods
+    var johnDoe = vCard.create(vCard.Version.FOUR)
+    johnDoe.add(vCard.Entry.NAME, "CAVALCANTE;Thomas;;")
+    johnDoe.add(vCard.Entry.FORMATTEDNAME, "Thomas Cavalcante")
+    johnDoe.add(vCard.Entry.NICKNAME, "tc")
+    johnDoe.add(vCard.Entry.TITLE, "Developer")
+    johnDoe.add(vCard.Entry.PHONE, "215-528-4056", vCard.Type.CELL)
+    johnDoe.add(vCard.Entry.EMAIL, "tpc75@drexel.edu", vCard.Type.WORK)
+    johnDoe.add(vCard.Entry.EMAIL, "cavalcantethomas@icloud.com", vCard.Type.HOME)
+    johnDoe.add(vCard.Entry.ORGANIZATION, "")
+    johnDoe.add(vCard.Entry.ADDRESS, ";;257 Lauriston St;Philadelphia;PA;19128;United States", vCard.Type.HOME)
+    johnDoe.add(vCard.Entry.URL, "http://thomascavalcante.com")
+    var link = vCard.export(johnDoe, "Contact", false) // use parameter true to force download
+    document.getElementById('link').appendChild(link)
+  </script>    
+
+  <!-- <script type="text/javascript">
+    // From JSON
+      var johnSmith = {
+        "version": "4.0",
+        "n": "SMITH;John;;",
+        "fn": "John Smith",
+        "nickname":"js",
+        "title": "Missing man too",
+        "tel": [
+        {"value": "555-555-555", "type": "cell"}
+        ],
+        "email": [
+        { "value": "john.smith@work.com", "type": "work" },
+        { "value": "john.smith@home.com", "type": "home" }
+        ]
+      }
+    var link = vCard.export(johnSmith, "John Smith", false) // use parameter true to force download
+    document.body.appendChild(link)
+  </script> -->
+  
+</body>
+</html>
